@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="bg-white">
+        <nav class="flex justify-around items-center py-4 h-[100px]">
+            <div>
+                <img class="w-24 cursor-pointer"
+                    src="https://mobirise.com/extensions/stackm5/web-studio/assets/images/logo.png" alt="Logo">
+            </div>
+
+            <div id="nav-lst"
+                class="md:static md:min-h-fit md:w-auto absolute bg-white left-0 top-[-100%] py-4 w-full flex items-center justify-around">
+                <ul class="flex md:flex-row flex-col items-center gap-[3vw]">
+                    <li>
+                        <a class="hover:text-blue-600 hover:underline font-bold duration-300" href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-blue-600 hover:underline font-bold duration-300" href="#">ABOUT</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-blue-600 hover:underline font-bold duration-300" href="#">FEATURES</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-blue-600 hover:underline font-bold duration-300" href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-black text-white px-4 py-3 rounded-full border-2 border-transparent hover:bg-white hover:text-black hover:border-black font-bold duration-300">GET
+                    STARTED</button>
+                <i id="mnu-btn" onclick="toggleMenu(this)"
+                    class="fa-solid fa-bars text-3xl cursor-pointer md:hidden"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="bg-black text-white flex flex-col justify-around item-center text-center py-28">
+        <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl my-4">WEB
+            DESIGN<br>STUDIO</h1>
+        <p class="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] mx-auto my-4 text-xl">Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+            Praesent amet libero elementum quam fermentum.
+        </p>
+        <div class="my-3">
+            <button class="m-2 px-10 py-4 rounded-xl border-2 border-white">Get Started</button>
+            <button class="m-2 px-10 py-4 rounded-xl bg-white text-gray-500">Read More</button>
+        </div>
+    </div>
+
+    <div class="flex flex-col justify-around items-center bg-black text-white lg:flex-row gap-3 px-10 py-10 lg:p-0">
+        <section class="w-[100%] mx-auto flex flex-col justify-around items-center lg:p-12 lg:w-1/2">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl my-8 font-bold">ABOUT STUDIO</h1>
+            <p class="w-[100%] mx-auto text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                sequi! Nulla
+                maxime, dolor dolorum
+                perspiciatis sed deserunt nemo quis dolore ratione consequuntur temporibus consequatur, iste tempora
+                reiciendis, repellendus corrupti libero?</p>
+            <button class="mx-2 my-7 px-10 py-4 rounded-xl border-2 border-white">Read More</button>
+        </section>
+        <section class="bg-white p-10 rounded-3xl mx-auto lg:p-20 my-10">
+            <img class="rounded-3xl"
+                src="https://mobirise.com/extensions/stackm5/web-studio/assets/images/features2.jpg" alt="Image 2">
+        </section>
+    </div>
+
+    <div class="p-10">
+        <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center my-8">FEATURES</h1>
+        <div class="flex flex-col justify-around items-center lg:flex-row ">
+            <section class="border-2 border-black rounded-xl w-[90%] h-96 my-3 text-center mx-2">
+                <h1 class="font-bold">WEB DESIGN</h1>
+            </section>
+            <section class="border-2 border-black rounded-xl w-[90%] h-96 my-3 text-center mx-2">
+                <h1 class="font-bold">SOFTWARE DEVELOPMENT</h1>
+            </section>
+            <section class="border-2 border-black rounded-xl w-[90%] h-96 my-3 text-center mx-2">
+                <h1 class="font-bold">SEO AND MARKETING</h1>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const btn = document.getElementById("mnu-btn")
+            const nav = document.getElementById("nav-lst")
+
+            if (btn.classList.contains("fa-bars")) {
+                btn.classList.replace("fa-bars", "fa-times")
+                nav.classList.replace("top-[-100%]", "top-[100px]")
+            } else {
+                btn.classList.replace("fa-times", "fa-bars")
+                nav.classList.replace("top-[100px]", "top-[-100%]")
+            }
+        }
+    </script>
+</body>
+
+</html>
